@@ -63,13 +63,21 @@ hi VertSplit ctermbg=2 ctermfg=0
 map <C-n> :NERDTreeToggle<CR>
 nnoremap <C-l> :call NumberToggle()<cr>
 
+" Autocommands
+"  Close if NERDTree is the only buffer
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
 " Functions
 function! NumberToggle()
-  if(&relativenumber == 1)
-    set norelativenumber
-  else
+  if(&number == 1)
     set relativenumber
+    set nonumber
+  elseif(&relativenumber == 1)
+    set norelativenumber
+    set nonumber
+  else
+    set norelativenumber
+    set number
   endif
 endfunc
-
 
