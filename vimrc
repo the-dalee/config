@@ -1,4 +1,4 @@
-"" Disable VI compatibility
+" Disable VI compatibility
 set nocp
 
 set backspace=2
@@ -6,10 +6,11 @@ set number
 set hlsearch
 set incsearch
 set visualbell
-set tabstop=4
-set shiftwidth=4
+set tabstop=2
+set shiftwidth=2
 set expandtab
-set syntax=on
+
+syntax on
 
 " Enable pathogen package management
 " See https://github.com/tpope/vim-pathogen
@@ -40,7 +41,7 @@ autocmd FileType c set omnifunc=ccomplete#Complete
 
 set noruler
 set statusline+=│               " Horizontal bar
-set laststatus=2    
+set laststatus=2
 set statusline+=\ %F\ %y        " Filename + type
 set statusline+=%m              " [+] if modified
 set statusline+=│               " Horizontal bar
@@ -62,6 +63,7 @@ hi VertSplit ctermbg=2 ctermfg=0
 " Key mappings
 map <C-n> :NERDTreeToggle<CR>
 nnoremap <C-l> :call NumberToggle()<cr>
+nnoremap <f12> :call ShowSpaces()<cr>
 
 " Autocommands
 "  Close if NERDTree is the only buffer
@@ -81,3 +83,13 @@ function! NumberToggle()
   endif
 endfunc
 
+let g:showspaces=0
+function ShowSpaces()
+  if(g:showspaces == 1)
+    set nolist lcs
+    let g:showspaces=0
+  else
+    set list lcs=tab:⇰\ ,trail:·,eol:↵
+    let g:showspaces=1
+  endif
+endfunction
