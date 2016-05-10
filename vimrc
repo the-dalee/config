@@ -24,7 +24,7 @@ set nospell
 set spelllang=en_us
 hi SpellBad ctermfg=black ctermbg=red cterm=underline,bold
 hi SpellLocal ctermfg=black ctermbg=yellow cterm=underline,bold
-hi SpellRare ctermfg=yellow cterm=underline,bold 
+hi SpellRare ctermfg=yellow cterm=underline,bold
 
 " Enable code completion with ^C^O
 set omnifunc=syntaxcomplete#Complete
@@ -85,11 +85,15 @@ endfunc
 
 let g:showspaces=0
 function ShowSpaces()
-  if(g:showspaces == 1)
+  if(g:showspaces == 0)
+    set list lcs=trail:▒
+    let g:showspaces=1
+  elseif(g:showspaces == 1)
+    set list lcs=tab:⇰·,trail:·,eol:↵
+    let g:showspaces=2
+  else
     set nolist lcs
     let g:showspaces=0
-  else
-    set list lcs=tab:⇰\ ,trail:·,eol:↵
-    let g:showspaces=1
   endif
 endfunction
+
