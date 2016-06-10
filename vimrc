@@ -47,11 +47,9 @@ set statusline+=%m              " [+] if modified
 set statusline+=│               " Horizontal bar
 set statusline+=%=              " Switch to the right side
 set statusline+=│               " Horizontal bar
-set statusline+=\ [0x%B]\       " Character code under cursor
+set statusline+=\ ➽\ %-04.4l    " L: LINE
 set statusline+=│               " Horizontal bar
-set statusline+=\ L\:%-04.4l    " L: LINE
-set statusline+=│               " Horizontal bar
-set statusline+=\ C\:%-04.4c    " C: Character
+set statusline+=\ ⟟\ %-04.4c    " C: Character
 set statusline+=│               " Horizontal bar
 
 
