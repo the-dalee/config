@@ -1,0 +1,5 @@
+# Local configuration for global functions depending on the machine
+
+export TEAM="sokoban"
+export NOTESDIR="$HOME/notes"
+export PROJDIR="$HOME/development"
