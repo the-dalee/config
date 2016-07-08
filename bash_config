@@ -3,3 +3,5 @@
 export TEAM="sokoban"
 export NOTESDIR="$HOME/notes"
 export PROJDIR="$HOME/development"
+export MOTD="\t\"All hope abandon, ye who enter here.\"\n\n\t -- The Divine Comedy by Dante Alighieri\n\t -- Michael Scott"
+
