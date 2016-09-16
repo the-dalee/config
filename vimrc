@@ -56,7 +56,7 @@ set statusline+=│               " Horizontal bar
 " Styles
 set fillchars+=vert:│
 hi VertSplit ctermbg=2 ctermfg=0
-
+hi LineNr ctermfg=0 ctermbg=8
 
 " Key mappings
 map <C-n> :NERDTreeToggle<CR>
