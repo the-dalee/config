@@ -57,11 +57,16 @@ set statusline+=│               " Horizontal bar
 set fillchars+=vert:│
 hi VertSplit ctermbg=2 ctermfg=0
 hi LineNr ctermfg=0 ctermbg=8
+hi StatusLine ctermfg=0 ctermbg=0
 
 " Key mappings
 map <C-n> :NERDTreeToggle<CR>
 nnoremap <C-l> :call NumberToggle()<cr>
 nnoremap <f12> :call ShowSpaces()<cr>
+map <C-Up> <C-Y>
+map <C-K> <C-Y>
+map <C-Down> <C-E>
+map <C-J> <C-E>
 
 " Autocommands
 "  Close if NERDTree is the only buffer
