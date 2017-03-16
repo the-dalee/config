@@ -52,6 +52,10 @@ set statusline+=│               " Horizontal bar
 set statusline+=\ ⟟\ %-04.4c    " C: Character
 set statusline+=│               " Horizontal bar
 
+" Autocomplete like in bash
+set wildmenu
+set wildmode=longest:full
+
 
 " Styles
 set fillchars+=vert:│
