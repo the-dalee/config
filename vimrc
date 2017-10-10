@@ -65,6 +65,7 @@ hi StatusLine ctermfg=0 ctermbg=0
 
 " Key mappings
 map <C-n> :NERDTreeToggle<CR>
+nnoremap <f6> :call SpellToggle()<cr>
 nnoremap <C-l> :call NumberToggle()<cr>
 nnoremap <f12> :call ShowSpaces()<cr>
 map <C-Up> <C-Y>
@@ -77,6 +78,15 @@ map <C-J> <C-E>
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 " Functions
+
+function! SpellToggle()
+  if(&spell == 1)
+    set nospell
+  else
+    set spell
+  endif
+endfunc
+
 function! NumberToggle()
   if(&number == 1)
     set relativenumber
