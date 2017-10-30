@@ -18,6 +18,12 @@ execute pathogen#infect()
 
 abbr ~~~ DaLee <mail.dalee@gmail.com>
 
+" Unicode characters
+abbr :yes: ✔
+abbr :no: ✘
+abbr :+1: 👍
+abbr :-1: 👎
+
 " Init spell check but deactivate it on startup
 " Can be activated with :set spell
 set nospell
