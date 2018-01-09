@@ -1,13 +1,7 @@
-# Enables proj command to list and go to a subfolder contained in folder $PROJDIR/$TEAM
-# or $PROJDIR/common
-#
-# Required congiguration env variables:
-#   - PROJDIR   Path where the projects are stored
-#   - TEAM      Name of the team
+# Enables proj command to list and go to a subfolder contained in folder $PROJDIR
 
 proj(){
-    cd $PROJDIR/$TEAM/$1 &> /dev/null  \
-    || cd $PROJDIR/common/$1 &> /dev/null \
+    cd $PROJDIR/$1 &> /dev/null  \
     || echo Project $1 not found && return 1
 }
 
