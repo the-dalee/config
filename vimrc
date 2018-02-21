@@ -10,6 +10,8 @@ set tabstop=2
 set shiftwidth=2
 set expandtab
 
+set cursorline
+
 syntax on
 
 " Enable pathogen package management
