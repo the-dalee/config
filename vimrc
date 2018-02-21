@@ -45,20 +45,10 @@ autocmd FileType c set omnifunc=ccomplete#Complete
 " Enable custom status line
 "│ Filename [Type] [+]│                          │ [0x0] │ L:1  │C:1 │
 
-function! GitBranch()
-  return system("git rev-parse --abbrev-ref HEAD 2>/dev/null | tr -d '\n'")
-endfunction
-
-function! StatuslineGit()
-  let l:branchname = GitBranch()
-  return strlen(l:branchname) > 0?' (⎇  '.l:branchname.')':''
-endfunction
-
 set noruler
 set statusline+=│               " Horizontal bar
 set laststatus=2
 set statusline+=\ %F            " Filename
-set statusline+=%{StatuslineGit()}
 set statusline+=%m              " [+] if modified
 set statusline+=│               " Horizontal bar
 set statusline+=%#LineNr#
