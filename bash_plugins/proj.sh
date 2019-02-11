@@ -10,7 +10,7 @@ _proj(){
     COMPREPLY=()
     cur="${COMP_WORDS[COMP_CWORD]}"
     prev="${COMP_WORDS[COMP_CWORD-1]}"
-    opts="$(echo $(ls $PROJDIR/$TEAM) $(ls $PROJDIR/common))"
+    opts="$(echo $(ls $PROJDIR))"
 
     COMPREPLY=( $(compgen -W "${opts}" -- ${cur}) )
     return 0

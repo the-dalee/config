@@ -10,6 +10,8 @@ set tabstop=2
 set shiftwidth=2
 set expandtab
 
+set cursorline
+
 syntax on
 
 " Enable pathogen package management
@@ -45,20 +47,10 @@ autocmd FileType c set omnifunc=ccomplete#Complete
 " Enable custom status line
 "│ Filename [Type] [+]│                          │ [0x0] │ L:1  │C:1 │
 
-function! GitBranch()
-  return system("git rev-parse --abbrev-ref HEAD 2>/dev/null | tr -d '\n'")
-endfunction
-
-function! StatuslineGit()
-  let l:branchname = GitBranch()
-  return strlen(l:branchname) > 0?' (⎇  '.l:branchname.')':''
-endfunction
-
 set noruler
 set statusline+=│               " Horizontal bar
 set laststatus=2
 set statusline+=\ %F            " Filename
-set statusline+=%{StatuslineGit()}
 set statusline+=%m              " [+] if modified
 set statusline+=│               " Horizontal bar
 set statusline+=%#LineNr#
@@ -78,13 +70,15 @@ set wildmode=longest:full
 set fillchars+=vert:│
 hi VertSplit ctermbg=2 ctermfg=0
 hi LineNr ctermfg=0 ctermbg=8
-hi StatusLine ctermfg=0 ctermbg=0
+hi StatusLine ctermfg=0 ctermbg=8
+hi FoldColumn ctermbg=None
 
 " Key mappings
 map <C-n> :NERDTreeToggle<CR>
 nnoremap <f6> :call SpellToggle()<cr>
 nnoremap <C-l> :call NumberToggle()<cr>
 nnoremap <f12> :call ShowSpaces()<cr>
+nnoremap <f5> :call ToggleProse()<cr>
 map <C-Up> <C-Y>
 map <C-K> <C-Y>
 map <C-Down> <C-E>
@@ -114,6 +108,26 @@ function! NumberToggle()
     set norelativenumber
     set number
   endif
+endfunc
+
+let g:prose=0
+function ToggleProse()
+  if(g:prose == 0)
+    let g:prose=1
+    setlocal formatoptions=antw
+    setlocal textwidth=100
+    setlocal wrapmargin=0
+    set foldcolumn=10
+    set columns=100
+  else
+    let g:prose=0
+    setlocal formatoptions=tcq
+    setlocal textwidth=0
+    setlocal wrapmargin=0
+    set foldcolumn=0
+    set columns=136
+  endif
+
 endfunc
 
 let g:showspaces=0
