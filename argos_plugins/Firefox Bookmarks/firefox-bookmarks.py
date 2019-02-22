@@ -43,8 +43,8 @@ def fetch_icons():
 
 
 def download_icon(url):
-    response = requests.get(url)
     try:
+        response = requests.get(url)
         content = response.content
         return base64.standard_b64encode(content).decode('ascii')
     except Exception as e:
