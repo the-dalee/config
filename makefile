@@ -21,5 +21,5 @@ install-vimrc: install-before
 
 install-bashrc: install-before
 	cp -n bash_config $(TARGETDIR)/.bash_config
-	cp -rf bash_plugins/* $(TARGETDIR)/.bash_plugins
+	mkdir -p $(TARGETDIR)/.bash_plugins && cp -rf bash_plugins/* $(TARGETDIR)/.bash_plugins
 	cp -f bashrc $(TARGETDIR)/.bashrc
