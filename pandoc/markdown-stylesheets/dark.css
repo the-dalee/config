@@ -1,0 +1,150 @@
+body {
+    padding: 50px;
+    font-family: Canraell, Ubuntu, Liberation sans, Arial, sans-serif;
+    font-size: 12pt;
+    font-weight: lighter;
+    background-color: #333;
+    color: #eee;
+}
+
+a:not(.sourceLine) {
+    color: #e95420;
+    font-weight: normal;
+}
+
+hr {
+    border-color: #eee;
+}
+
+ul {
+    list-style-type: '- ';
+    list-style-position: outside;
+}
+
+ul li {
+    padding: 3px;
+}
+
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+h1 {
+    font-size: 120%
+    margin-bottom: 1.1em;
+    color: #e95420;
+    text-transform: uppercase;
+
+}
+
+h2 {
+    border-bottom: 1px solid #e95420;
+    margin-top: 1.15em;
+    color: #e95420;
+}
+
+h3 {
+    color: #949494;
+}
+
+table {
+    padding: 0px;
+    margin: 30px 0px;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead {
+    color: #fff;   
+}
+
+
+th {
+    color: #767676;
+    padding-left: 10px;
+    text-align: left;
+    font-size: 1.4em;
+    border-left: 1px solid #555;
+    border-right: 1px solid #555;
+}
+
+td {
+    border: 1px solid #555;
+    color: #d6d6d6;
+    padding: 8px;
+    font-size: 0.9em;
+    font-weight: lighter;
+}
+
+tbody {
+
+    border: 1px solid #dadada;
+    padding: 12px;
+}
+
+figcaption {
+    margin-top: 10px;    
+    font-weight: normal;
+    color: #999;
+}
+
+pre code {
+    border: none;
+}
+
+code {
+
+    border: 1px solid #444;
+    padding: 2px;
+}
+
+pre {
+
+  padding: 7px;
+}
+
+pre .sourceCode {
+    display:block;
+    font-family: monospace;
+    background-color: #444;
+    width: em(440);
+    margin: 4px auto;
+    padding: 9px;
+    border-radius: 2px;
+    box-shadow: 3px 3px 4px rgba(0,0,0,.45);
+    overflow: auto;
+}
+
+
+.sourceCode .co {
+    color: #999;
+}
+
+.sourceCode .kw {
+    color: #99f;
+    font-weight: bold;
+}
+
+.sourceCode .ch {
+    color: #e95420;
+}
+
+
+.sourceCode .st {
+    color: #e95420;
+}
+
+
+.sourceCode .dv {
+    color: #e95420;
+}
+
+.sourceCode .cf {
+    color: #4444ff;
+    font-weight: bold;
+}
+
+
+
