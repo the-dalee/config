@@ -1,0 +1,26 @@
+{
+  "github_host": "",
+  "login": "",
+  "token": "",
+  "username": "",
+  "organization": "",
+  "links": [
+    {
+      "title": "Board",
+      "url": ""
+    },
+    {
+      "title": "Configuration",
+      "url": ""
+    },
+    {
+      "title": "Documentation",
+      "url": ""
+    },
+    {
+      "title": "Organization",
+      "url": ""
+    }
+  ]
+
+}
